@@ -73,7 +73,7 @@
                 })
             })
             ImgDownload(imgs)
-            $("#fc_btn").attr("disabled","true")
+            $("#fc_btn").attr("disabled", "true")
         })
     });
 
