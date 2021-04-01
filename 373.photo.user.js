@@ -6,9 +6,7 @@
 // @author      qmaru
 // @description 下载 Photogallery 的图片
 // @grant       GM_addStyle
-// @grant       GM_setClipboard
-// @grant       GM_xmlhttpRequest
-// @version     1.0.1
+// @version     1.0.2
 // ==/UserScript==
 (function () {
     'use strict';
@@ -59,12 +57,12 @@
     $(document).ready(function () {
         DLButton()
 
-        var prefix_url = "https://minamihamabe.futureartist.net/resources/"
-        var suffix_url = "/download?lang=zh-CN"
         $("#fc_btn").click(function () {
             var imgs = []
             $(".gallery-photos div a").each(function () {
                 try {
+                    var prefix_url = "https://minamihamabe.futureartist.net/resources/"
+                    var suffix_url = "/download?lang=zh-CN"
                     var img_id_raw = $(this).attr("id")
                     var img_id = img_id_raw.split("_")[1]
                     var dl_url = prefix_url + img_id + suffix_url
@@ -84,5 +82,4 @@
             $("#fc_btn").attr("disabled", "true")
         })
     });
-
 })();
