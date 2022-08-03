@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        RedBook - API Data
-// @namespace   aobeom
+// @namespace   qmaru
 // @match       https://influencer.xiaohongshu.com/solar/*
 // @require     https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
 // @author      青蛙王子

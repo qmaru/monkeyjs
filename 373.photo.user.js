@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        373 FanClub Photo
-// @namespace   aobeom
+// @namespace   qmaru
 // @match       https://minamihamabe.futureartist.net/photogallery/*
 // @require     https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
 // @author      qmaru
