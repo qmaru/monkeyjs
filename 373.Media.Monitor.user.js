@@ -70,7 +70,6 @@
                 "name": btn_name,
                 "url": url
             })
-
         }
 
         $('.MuiTypography-h6').each(function () {
@@ -78,7 +77,7 @@
             if (text !== "") {
                 btn_html = ""
                 for (i in btn_data) {
-                    btn = btn_data[0]
+                    btn = btn_data[i]
                     btn_html = btn_html + '<a id="fc_a" href="' + btn.url + "#" + text + '"><button id="fc_btn">' + btn.name + '</button></a>'
                 }
                 var DLButton = '<div id="fc_dl">' + btn_html + '</div>'
