@@ -57,7 +57,7 @@
     )
 
     function DLButton(hls_urls) {
-        var btn_html = ""
+        var btn_data = []
         for (i in hls_urls) {
             var url = hls_urls[i]
             var btn_name = ""
@@ -66,12 +66,21 @@
             } else {
                 btn_name = "KEY"
             }
-            btn_html = btn_html + '<a id="fc_a" href="' + url + '"><button id="fc_btn">' + btn_name + '</button></a>'
+            btn_data.push({
+                "name": btn_name,
+                "url": url
+            })
+
         }
 
         $('.MuiTypography-h6').each(function () {
             var text = $(this).text()
             if (text !== "") {
+                btn_html = ""
+                for (i in btn_data) {
+                    btn = btn_data[0]
+                    btn_html = btn_html + '<a id="fc_a" href="' + btn.url + "#" + text + '"><button id="fc_btn">' + btn.name + '</button></a>'
+                }
                 var DLButton = '<div id="fc_dl">' + btn_html + '</div>'
                 $(this).append(DLButton)
             }
